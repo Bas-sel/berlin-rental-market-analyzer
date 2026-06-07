@@ -26,11 +26,7 @@ with a deliberate focus on SQL and Power BI as core deliverables.
 ## Key Findings
 
 > *(This section will be completed in Phase 6 once the full analysis is done.)*
-> Example placeholders:
-> - Mitte and Prenzlauer Berg command the highest median rents per m²
-> - Furnished listings carry a X% premium over unfurnished equivalents
-> - Properties under 40 m² show the steepest price-per-sqm rates
-> - Districts in the south-east offer the best affordability relative to size
+> ------------------------------
 
 ---
 
@@ -77,7 +73,7 @@ berlin-rental-market-analyzer/
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/berlin-rental-market-analyzer.git
+git clone https://github.com/Bas-sel/berlin-rental-market-analyzer.git
 cd berlin-rental-market-analyzer
 
 # 2. Create and activate the conda environment
@@ -116,8 +112,8 @@ pip install -r requirements.txt
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the MIT License.
 
 ---
 
-*Built by [Your Name] · [Your LinkedIn or GitHub profile link]*
+*Built by Bassel Kurbaj · https://www.linkedin.com/in/baselku*

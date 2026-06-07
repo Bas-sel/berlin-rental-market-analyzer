@@ -28,7 +28,8 @@ ENV/
 # so no need to gitignore .ipynb files themselves
 
 # ── Raw data — never commit large files ──
-data/raw/
+data/raw/*
+!data/raw/.gitkeep
 # Exception: if raw file is < 1 MB, you may commit it. Document the decision in README.
 # If raw file is > 50 MB, add it here and document download steps in README instead:
 # data/raw/*.csv
