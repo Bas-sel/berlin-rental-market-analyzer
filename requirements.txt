@@ -1,0 +1,35 @@
+# ─────────────────────────────────────────────────────────────
+#  Berlin Rental Market Analyzer — requirements.txt
+#  Python 3.11.5  |  Install: pip install -r requirements.txt
+# ─────────────────────────────────────────────────────────────
+
+# ── Core data manipulation ──────────────────────────────────
+pandas==2.1.4
+numpy==1.26.2
+
+# ── Database ────────────────────────────────────────────────
+sqlalchemy==2.0.23
+# sqlite3 is part of the Python standard library — no install needed
+
+# ── Visualisation ───────────────────────────────────────────
+matplotlib==3.8.2
+seaborn==0.13.0
+
+# ── Geospatial (Phase 4 bonus choropleth) ───────────────────
+geopandas==0.14.1
+# Uncomment if you attempt the choropleth map:
+# shapely==2.0.2
+# pyproj==3.6.1
+
+# ── Jupyter ─────────────────────────────────────────────────
+jupyter==1.0.0
+ipykernel==6.27.1
+nbformat==5.9.2
+
+# ── Utilities ───────────────────────────────────────────────
+openpyxl==3.1.2          # Excel read/write support for Pandas
+requests==2.31.0         # HTTP requests (data acquisition)
+python-dotenv==1.0.0     # Load .env variables safely
+
+# ── Optional: Kaggle API (Phase 1 data download) ────────────
+kaggle==1.5.16

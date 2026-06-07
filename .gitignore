@@ -1,0 +1,78 @@
+# ─────────────────────────────────────────
+#  Berlin Rental Market Analyzer — .gitignore
+# ─────────────────────────────────────────
+
+# ── Python ──────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+
+# ── Virtual environments ─────────────────
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+# ── Conda ────────────────────────────────
+# (conda env lives outside the project folder by default — nothing to ignore)
+# If you ever create a local conda env inside the project folder, add its name here:
+# berlin_rental_env/
+
+# ── Jupyter Notebooks ────────────────────
+.ipynb_checkpoints/
+# Notebook outputs are cleared before committing (see Phase 6 protocol)
+# so no need to gitignore .ipynb files themselves
+
+# ── Raw data — never commit large files ──
+data/raw/
+# Exception: if raw file is < 1 MB, you may commit it. Document the decision in README.
+# If raw file is > 50 MB, add it here and document download steps in README instead:
+# data/raw/*.csv
+# data/raw/*.zip
+
+# ── Environment / secrets ────────────────
+.env
+*.env
+secrets.py
+config_local.py
+
+# ── IDE / editor ─────────────────────────
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+Thumbs.db
+
+# ── OS noise ─────────────────────────────
+desktop.ini
+.DS_Store
+ehthumbs.db
+
+# ── Logs & temp ──────────────────────────
+*.log
+*.tmp
+*.temp
+*.swp
+*.bak
+
+# ── Distribution / packaging ─────────────
+dist/
+build/
+*.egg-info/
+*.egg
+MANIFEST
+
+# ── SQLite database ───────────────────────
+# Commit the .db file only if < 50 MB.
+# If larger, uncomment the line below and document how to regenerate it in README.
+# *.db
+
+# ── Kaggle API credentials ───────────────
+kaggle.json
+.kaggle/
