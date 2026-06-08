@@ -1,0 +1,5 @@
+﻿amenity,count_with,count_without,avg_rent_with_eur,avg_rent_without_eur,rent_premium_eur
+Lift,5011,5358,1345.51,966.1,379.41
+Balcony,7584,2785,1238.01,908.3,329.71
+Garden,1442,8927,1346.44,1117.64,228.81
+Cellar,5564,4805,1245.12,1038.68,206.44

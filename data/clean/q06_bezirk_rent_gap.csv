@@ -1,0 +1,13 @@
+﻿bezirk,listing_count,avg_rent,avg_price_per_sqm,next_pricier_bezirk_rent,rent_gap_to_next_eur
+Charlottenburg-Wilmersdorf,1251,1657.09,16.29,,
+Mitte,1955,1444.41,18.88,1657.09,212.68
+Friedrichshain-Kreuzberg,876,1319.17,17.14,1444.41,125.24
+Pankow,1141,1191.0,14.36,1319.17,128.17
+Steglitz-Zehlendorf,640,1170.46,12.87,1191.0,20.54
+Tempelhof-Schöneberg,654,1140.52,13.91,1170.46,29.94
+Neukölln,512,951.52,13.27,1140.52,189.0
+Treptow-Köpenick,1065,844.75,12.05,951.52,106.77
+Reinickendorf,515,818.22,11.06,844.75,26.53
+Lichtenberg,556,766.83,11.43,818.22,51.39
+Spandau,612,702.4,9.77,766.83,64.43
+Marzahn-Hellersdorf,592,587.66,9.03,702.4,114.74

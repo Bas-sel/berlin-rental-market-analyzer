@@ -1,0 +1,13 @@
+﻿bezirk,listing_count,avg_rent,avg_price_per_sqm,min_rent,max_rent,city_avg_rent,city_total_listings,affordability_index,affordability_tier,deviation_from_city_avg_eur
+Charlottenburg-Wilmersdorf,1251,1657.09,16.29,227.02,9500.0,1149.46,10369,1.442,Expensive,507.63
+Mitte,1955,1444.41,18.88,179.99,7000.0,1149.46,10369,1.257,Expensive,294.95
+Friedrichshain-Kreuzberg,876,1319.17,17.14,202.4,5700.0,1149.46,10369,1.148,Average,169.71
+Pankow,1141,1191.0,14.36,268.75,5289.0,1149.46,10369,1.036,Average,41.54
+Steglitz-Zehlendorf,640,1170.46,12.87,227.85,6500.0,1149.46,10369,1.018,Average,21.0
+Tempelhof-Schöneberg,654,1140.52,13.91,199.0,5600.0,1149.46,10369,0.992,Average,-8.94
+Neukölln,512,951.52,13.27,197.15,3496.5,1149.46,10369,0.828,Affordable,-197.94
+Treptow-Köpenick,1065,844.75,12.05,237.1,3170.0,1149.46,10369,0.735,Affordable,-304.71
+Reinickendorf,515,818.22,11.06,261.92,2430.0,1149.46,10369,0.712,Affordable,-331.24
+Lichtenberg,556,766.83,11.43,182.78,2800.0,1149.46,10369,0.667,Affordable,-382.63
+Spandau,612,702.4,9.77,180.07,2500.0,1149.46,10369,0.611,Affordable,-447.06
+Marzahn-Hellersdorf,592,587.66,9.03,178.16,2372.5,1149.46,10369,0.511,Affordable,-561.8
