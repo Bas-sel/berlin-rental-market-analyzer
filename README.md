@@ -82,19 +82,15 @@ conda activate berlin_rental
 
 # 3. Install dependencies
 pip install -r requirements.txt
+
 ```
-
-> **Data:** Download the raw dataset from [Kaggle — link to be added] and place it in `data/raw/`.
-> See Phase 1 notes for the exact download command.
-
----
 
 ## Phases
 
 | Phase | Description | Status |
 |---|---|---|
 | 0 | Setup & Foundation | ✅ Complete |
-| 1 | Data Acquisition | 🔲 Pending |
+| 1 | Data Acquisition | ✅ Complete |
 | 2 | Data Cleaning & EDA | 🔲 Pending |
 | 3 | SQLite Database & SQL Analysis | 🔲 Pending |
 | 4 | Python Visualisations | 🔲 Pending |
@@ -105,8 +101,17 @@ pip install -r requirements.txt
 
 ## Data Source
 
-> *(To be completed in Phase 1 once the dataset is confirmed.)*
-> Dataset: [Dataset name] via Kaggle — [license type]
+**Dataset:** [Apartment Rental Offers in Germany](https://www.kaggle.com/datasets/corrieaar/apartment-rental-offers-in-germany)  
+**Source:** ImmobilienScout24 scrapes via Kaggle (corrieaar)  
+**Coverage:** Germany-wide, four scrape dates: Sep 2018 – Feb 2020  
+**Berlin subset:** 10,406 listings after filtering `regio1 == 'Berlin'`  
+**License:** CC BY-NC-SA 4.0 — non-commercial use  
+
+> The raw CSV is not committed to this repo. To download it, set up your Kaggle API
+> credentials (see [Kaggle API docs](https://www.kaggle.com/docs/api)), then run:
+> ```
+> python src/download_data.py
+> ```
 
 ---
 
