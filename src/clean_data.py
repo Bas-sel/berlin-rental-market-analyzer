@@ -421,7 +421,6 @@ def standardise_bezirk_names(df: pd.DataFrame) -> pd.DataFrame:
     the Kiez-level data is preserved for any granular analysis later.
 
     Any regio3 values not found in OLD_TO_NEW_BEZIRK are printed at the end.
-    If you see unmapped values, paste them to Claude and they will be added.
     """
 
     def lookup_bezirk(raw_value) -> str:
@@ -466,7 +465,7 @@ def standardise_bezirk_names(df: pd.DataFrame) -> pd.DataFrame:
             .value_counts()
             .head(20)
         )
-        print("\n  Top unmapped regio3 values (paste these to Claude to extend the map):")
+        print("\n  Top unmapped regio3 values:")
         print(top_unmapped.to_string())
 
     return df
