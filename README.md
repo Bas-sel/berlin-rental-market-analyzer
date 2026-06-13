@@ -93,7 +93,7 @@ pip install -r requirements.txt
 | 1 | Data Acquisition | ✅ Complete |
 | 2 | Data Cleaning & EDA | ✅ Complete |
 | 3 | SQLite Database & SQL Analysis | ✅ Complete |
-| 4 | Python Visualisations | 🔲 Pending |
+| 4 | Python Visualisations | ✅ Complete |
 | 5 | Power BI Dashboard | 🔲 Pending |
 | 6 | Polish, Documentation & Launch | 🔲 Pending |
 
