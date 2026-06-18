@@ -60,13 +60,14 @@ with deliberate focus on SQL and Power BI as core technical deliverables.
 The dashboard is a 3-page interactive report built on a star schema data model
 with 20+ DAX measures.
 
-**Page 1 — Market Overview:** KPI cards, average rent by district (coloured by
-district tier), Berlin map with rent bubbles, listings by property type, slicers
-for district, property type, and interior quality.
+**Page 1 — Market Overview:** KPI cards (total listings, avg rent, median rent,
+avg price per m²), average rent by district coloured by district tier, Berlin map
+with rent bubbles, listings by property type, and slicers for district, property type,
+and interior quality.
 
 **Page 2 — District Deep Dive:** Avg rent vs city-wide average KPI cards,
-rent by size category, rent by construction era, rent vs city average by interior
-quality, and an individual listings detail table.
+rent by size category (Micro → Large), rent by construction era (Pre-1918 → Post-1990),
+rent vs city average by interior quality, and an individual listings detail table.
 
 **Page 3 — Amenity Analysis:** Balcony and kitchen premium KPI cards, living space
 vs rent scatter plot coloured by district tier, balcony and kitchen availability
@@ -83,20 +84,24 @@ berlin-rental-market-analyzer/
 │
 ├── data/
 │   ├── raw/            # Original dataset — never modified (gitignored, > 50 MB)
-│   └── clean/          # Cleaned CSV + SQL query outputs (q01–q10)
+│   └── clean/          # Cleaned CSV (berlin_listings_clean.csv) + SQL query outputs (q01–q10)
 │
-├── notebooks/          # Jupyter notebooks — EDA and analysis
+├── src/                # Python scripts — one script per pipeline stage
+│   ├── download_data.py        # Downloads dataset from Kaggle
+│   ├── clean_data.py           # Cleaning pipeline and feature engineering
+│   ├── data_quality_check.py   # Data quality report (nulls, dtypes, row counts)
+│   ├── load_to_sqlite.py       # Loads clean data into SQLite database
+│   ├── run_all_queries.py      # Runs all SQL queries and exports CSVs
+│   └── visualizations.py       # Generates all Matplotlib/Seaborn figures
 │
-├── src/                # Python scripts — cleaning pipeline, SQL loader, visualisations
-│
-├── sql/                # All .sql query files (10 analytical queries)
+├── sql/                # All .sql query files (10 analytical queries + schema)
 │
 ├── reports/
 │   ├── figures/        # Chart PNGs (300 dpi) + dashboard screenshots
-│   └── berlin_rental_dashboard.pdf
+│   └── Berlin_Rental_Dashboard.pdf
 │
 ├── powerbi/
-│   └── berlin_rental_dashboard.pbix
+│   └── berlin_rental.pbix
 │
 ├── .gitignore
 ├── requirements.txt
@@ -119,8 +124,14 @@ conda create -n berlin_rental python=3.11.5 && conda activate berlin_rental && p
 python src/download_data.py
 ```
 
-After that, run the scripts in `src/` in order:
-`cleaning_pipeline.py` → `sql_loader.py` → `run_all_queries.py` → `visualisations.py`
+Then run the pipeline scripts in order:
+
+```bash
+python src/clean_data.py
+python src/load_to_sqlite.py
+python src/run_all_queries.py
+python src/visualizations.py
+```
 
 > The raw dataset is not committed to this repo (CC BY-NC-SA 4.0 licence, non-commercial use).
 > You will need a [Kaggle API token](https://www.kaggle.com/docs/api) to download it.
@@ -138,7 +149,7 @@ After that, run the scripts in `src/` in order:
    `era` (Pre-1918 / 1918–1945 / 1946–1990 / Post-1990), `district_tier` (Affordable / Mid / Premium)
 4. **SQL analysis** — 10 analytical queries including window functions (RANK, LAG),
    CTEs, correlated subqueries, and multi-level aggregations in SQLite
-5. **Python visualisations** — 5 Matplotlib/Seaborn charts covering distribution,
+5. **Python visualisations** — 10 Matplotlib/Seaborn charts covering distribution,
    correlation, and geographic comparisons, saved at 300 dpi
 6. **Power BI dashboard** — Star schema data model (1 fact table + 5 dimension tables),
    20+ DAX measures, 3-page interactive dashboard with slicers and map visuals
